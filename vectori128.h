@@ -602,7 +602,7 @@ static inline Vec4b operator || (Vec4b a, Vec4b b) {
 
 // vector operator ^ : xor
 static inline Vec4b operator ^ (Vec4b a, Vec4b b) {
-    return __mmask8(__mmask8(a) | __mmask8(b)); // _kxor_mask8(__mmask8(a), __mmask8(b));
+    return __mmask8(__mmask8(a) ^ __mmask8(b)); // _kxor_mask8(__mmask8(a), __mmask8(b));
 }
 
 // vector operator ~ : not
